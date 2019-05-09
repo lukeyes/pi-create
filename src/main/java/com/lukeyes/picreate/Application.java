@@ -15,7 +15,7 @@ public class Application {
 
     public Application() {
         this.roomba = new RoombaCommSerial64(true);
-        this.mInput = new XBoxInputWindows();
+        this.mInput = XBoxInput.create();
     }
 
     public static void main(String[] args) {

@@ -7,6 +7,11 @@ import net.java.games.input.ControllerEnvironment;
 
 
 public abstract class XBoxInput {
+
+	static XBoxInput create() {
+		// TODO - query system to determine which type of controller to use
+		return new XBoxInputWindows();
+	}
 	
 	private void makeController(Controller c) 
 	{
