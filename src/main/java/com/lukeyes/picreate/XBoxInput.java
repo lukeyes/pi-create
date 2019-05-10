@@ -9,7 +9,12 @@ import net.java.games.input.ControllerEnvironment;
 public abstract class XBoxInput {
 
 	static XBoxInput create() {
-		// TODO - query system to determine which type of controller to use
+
+		String osName = System.getProperty("os.name");
+		if("Linux".equals(osName)) {
+			return new XBoxInputLinux();
+		}
+
 		return new XBoxInputWindows();
 	}
 	
@@ -39,6 +44,7 @@ public abstract class XBoxInput {
 			}				
 				
 			makeController(ca[i]);
+			break;
 		}
 		
 		if( mInputComponents == null )
