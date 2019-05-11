@@ -12,7 +12,7 @@ Requires 4 peices of hardware.
 
 Uses maven to build, call `mvn clean install` to build and package  
 
-This will generate a shaded jar in the `targets` folder, and a bunch of native dlls for jinput in `target\natives`  
+This will generate a shaded jar in the `targets` folder, and a bunch of native dlls for jinput in `targets\natives`  
 
 ## Running
 
