@@ -44,7 +44,7 @@ First, install jinput drivers by running the following command in the terminal.
 `sudo apt-get install libjinput-jni`  
 
 This will put a driver called "libjinput.so" under the `/usr/lib/jni` folder.  
-However, the code expects the driver to have an `64` appended to the name if the code is not running on an `i386` architecture (like ARM).  So you will need to do a hack to get the driver to load correct.  
+However, the code expects the driver to have an `linux64` appended to the name if the code is not running on an `i386` architecture (like ARM).  So you will need to do a hack to get the driver to load correct.  
 
 `sudo cp /usr/lib/jni/libjinput.so /usr/lib/jni/libjinput/libjinput-linux64.so`  
 
@@ -52,7 +52,7 @@ Now you can run the application by going to the `targets` directory in the termi
 
 `java -Dnet.java.games.input.librarypath=/usr/lib/jni -jar pi-create-1.0-SNAPSHOT-shaded.jar`  
 
-I recommend that if you are running this headless on a Raspberry pi, that you add the command to start the program to `rc.local` with fully qualified paths, like so.  
+I recommend that if you are running this headless on a Raspberry pi, that you add the command to start the program to `/etc/rc.local` with fully qualified paths, like so.  
 
 `java -Dnet.java.games.input.librarypath=/usr/lib/jni -jar /home/pi/pi-create/target/pi-create-1.0-SNAPSHOT-shaded.jar &`  
 
