@@ -12,13 +12,13 @@ Requires 4 peices of hardware.
 
 Uses maven to build, call `mvn clean install` to build and package  
 
-This will generate a shaded jar in the `targets` folder, and a bunch of native dlls for jinput in `targets\natives`  
+This will generate a shaded jar in the `target` folder, and a bunch of native dlls for jinput in `target\natives`  
 
 ## Running
 
 ### Windows (PC)
 
-Easiest way is to go to the `targets` directory where the shaded jar lives and run the following command  
+Easiest way is to go to the `target` directory where the shaded jar lives and run the following command  
 `java -Djava.library.path=natives -jar pi-create-1.0-SNAPSHOT-shaded.jar`.  
 That's all you'll need to do for Windows as it is set to load the correct dlls and doesn't need special permissions  
 
